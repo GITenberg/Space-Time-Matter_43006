@@ -1,0 +1,77 @@
+%% Generated from fig12.xp on Sat Jun 15 14:58:59 EDT 2013 by
+%% ePiX-1.2.10
+%% 
+%%   Cartesian bounding box: [0,3] x [0,1.5]
+%%   Actual size: 2 x 1.5in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\xdefinecolor{rgb_ffffff}{rgb}{1,1,1}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2in,1.5in);
+\pgfsetlinewidth{0.8pt}
+\draw (0in,0in)--(2.75in,0in);
+\draw (0in,0in)--(0.733333in,1.65in);
+\pgfsetlinewidth{0.4pt}
+\draw (0.5in,0in)--(1.1in,1.35in);
+\draw (1in,0in)--(1.46667in,1.05in);
+\draw (1.5in,0in)--(1.83333in,0.75in);
+\draw (2in,0in)--(2.2in,0.45in);
+\draw (2.5in,0in)--(2.56667in,0.15in);
+\draw (0.133333in,0.3in)--(2.38333in,0.3in);
+\draw (0.133333in,0.3in)--(0.5in,0in);
+\draw (0.266667in,0.6in)--(2.01667in,0.6in);
+\draw (0.266667in,0.6in)--(1in,0in);
+\draw (0.4in,0.9in)--(1.65in,0.9in);
+\draw (0.4in,0.9in)--(1.5in,0in);
+\draw (0.533333in,1.2in)--(1.28333in,1.2in);
+\draw (0.533333in,1.2in)--(2in,0in);
+\draw (0.666667in,1.5in)--(0.916667in,1.5in);
+\draw (0.666667in,1.5in)--(2.5in,0in);
+\filldraw[color=rgb_ffffff] (0in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (0in,0in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.133333in,0.3in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.133333in,0.3in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.266667in,0.6in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.266667in,0.6in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.4in,0.9in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.4in,0.9in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.533333in,1.2in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.533333in,1.2in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.666667in,1.5in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.666667in,1.5in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.5in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.5in,0in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.633333in,0.3in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.633333in,0.3in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.766667in,0.6in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.766667in,0.6in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (0.9in,0.9in) circle(0.0207555in);
+\draw[color=rgb_000000] (0.9in,0.9in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.03333in,1.2in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.03333in,1.2in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (1in,0in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.13333in,0.3in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.13333in,0.3in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.26667in,0.6in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.26667in,0.6in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.4in,0.9in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.4in,0.9in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.5in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.5in,0in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.63333in,0.3in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.63333in,0.3in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (1.76667in,0.6in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.76667in,0.6in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (2in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (2in,0in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (2.13333in,0.3in) circle(0.0207555in);
+\draw[color=rgb_000000] (2.13333in,0.3in) circle(0.0207555in);
+\filldraw[color=rgb_ffffff] (2.5in,0in) circle(0.0207555in);
+\draw[color=rgb_000000] (2.5in,0in) circle(0.0207555in);
+\pgftext[at={\pgfpoint{1in}{-0.166044in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~12.}}}}
+\end{tikzpicture}

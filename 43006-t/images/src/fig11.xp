@@ -1,0 +1,87 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+double MAX(2.5), pMAX(1.2*MAX);
+
+P cone(double r, double t)
+{
+  return polar(r, t) + r*E_3;
+}
+
+domain R(P(0, 0), P(MAX, 2*M_PI), mesh(MAX, 120));
+
+void mk(const P& loc)
+{
+  circle(loc, 0.025);
+}
+
+int main()
+{
+  picture(P(-pMAX, 0), P(pMAX, pMAX), "4 x 2in");
+
+  begin();
+  P VIEWPT(4, -10, 3);
+  camera.at(VIEWPT);
+
+  double t0(M_PI/6), t1(0.15), // "cylindrical" coords of t'
+    dist(norm(VIEWPT - 2*E_3)), angle(M_PI_2 - Asin(2.0/dist)),
+    phi(Atan2(VIEWPT.x2(), VIEWPT.x1())),
+    th0(phi + angle), th1(phi - angle); // angles of visible cone generators
+
+  P O(0, 0, 0),
+    v2(polar(tanh(t1), t0) + E_3), // t' axis normalized to unit height
+    v2n(cosh(t1)*v2), // same, Lorentz normalized
+    ax2(polar(cosh(t1), t0) + sinh(t1)*E_3), // Lorentz perp to t' axis
+    ax3(cis(t0 + M_PI_2));
+
+  arrow_inset(0.75);
+
+  dash_size(6);
+  bold();
+
+  arrow(O, 2*E_1);
+  arrow(O, 2*E_2);
+  arrow(O, MAX*E_3);
+  arrow(O, MAX*v2);
+
+  arrow(v2n, v2n - (Cos(t0)*ax2 + Sin(t0)*ax3));
+
+  line(O, cone(2, th0)); // cone generators
+  line(O, cone(2, th1));
+  plot(cone, R.slice1(2));
+
+  label(2*E_1, P(4, 0), "$x_{1}$", r);
+  label(2*E_2, P(4, 0), "$x_{2}$", r);
+  label(MAX*E_3, P(-2, 0), "$t$", l);
+  label(MAX*v2, P(4, 0), "$t'$", r);
+  label(O, P(-2, -2), "$O$", bl);
+
+  // boosted cone section
+  ellipse(v2n, Cos(t0)*ax2 + Sin(t0)*ax3, -Sin(t0)*ax2 + Cos(t0)*ax3);
+
+  // sheared cylinder
+  ellipse(O, E_1, E_2);
+  ellipse(2*v2n, E_1, E_2);
+
+  plain();
+  line(O + cis(th0), 2*v2n + cis(th0));
+  line(O + cis(th1), 2*v2n + cis(th1));
+
+  circ(2*E_3);
+  circ(2*v2n);
+  circ(v2n);
+
+  dashed();
+  line(O + cis(th0), 2*E_3 + cis(th0));
+  line(O + cis(th1), 2*E_3 + cis(th1));
+  ellipse(2*E_3, E_1, E_2, 0, 2*M_PI, 40);
+
+  camera.at(0, 0, 1).range(0);
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -24), "\\textsc{Fig.~11.}", b);
+
+  label_angle(-M_PI_2);
+  label(P(-2, 2), P(-2, -6), "\\textit{Light cone.}", bl);
+  tikz_format();
+  end();
+}

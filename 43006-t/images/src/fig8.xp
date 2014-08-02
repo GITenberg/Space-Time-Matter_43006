@@ -1,0 +1,51 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+void mirror(const P& loc, const P& refl)
+{
+  P dir(J(refl - loc));
+  dir *= pt_to_screen(6.0)/(norm(dir));
+  line(loc + dir, loc - dir);
+}
+
+int main()
+{
+  picture(P(-0.5,0), P(2,1), "3 x 1.2in");
+
+  begin();
+
+  P O(0, 0), Op(0.75, 0), Opp(1.25, 0), pA(1.75, 1);
+  arrow_inset(0.75);
+
+  bold();
+  arrow(P(xmin(), 0), P(xmax(), 0));
+  line(pA, O);
+  line(pA, Op);
+  line(pA, Opp);
+
+  bbold();
+  mirror(pA, Op);
+
+  plain();
+  arc_measure(Op, Opp - Op, pA - Op, P(2, 2), "$\\theta$", r, 16);
+  arc_measure(pA, Op - pA, Opp - pA, 24);
+  arc_measure(pA, O - pA, Op - pA, 20);
+
+  circ(O, P(0, -4), "$O$", b);
+  circ(Op, P(0, -4), "$O'$", b);
+  circ(Opp, P(0, -4), "$O''$", b);
+
+  label(0.5*(O + Op), P(0, -4), "$vt'$", b);
+  label(0.5*(Op + Opp), P(0, -4), "$vt''$", b);
+
+  label(pA, P(2, 2), "$A'$", tr);
+
+  label(0.5*(O + pA), P(-2, 2), "$ct'$", tl);
+  label(0.5*(Opp + pA), P(2, -2), "$ct''$", br);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -24), "\\textsc{Fig.~8.}", b);
+
+  tikz_format();
+  end();
+}

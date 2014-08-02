@@ -1,0 +1,28 @@
+%% Generated from fig13.xp on Mon Jun 17 10:48:29 EDT 2013 by
+%% ePiX-1.2.10
+%% 
+%%   Cartesian bounding box: [-2,2] x [-2,2]
+%%   Actual size: 2 x 2in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2in,2in);
+\pgftext[at={\pgfpoint{0.889304in}{0in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~13.}}}}
+\pgfsetlinewidth{0.8pt}
+\draw (1.83562in,1.19931in)--(0.582182in,0.900345in);
+\draw (0.512543in,0.281646in)--(1.24372in,1.35917in);
+\draw (1.18569in,2.08789in)--(-0.0677673in,1.78895in);
+\draw (-0.137412in,1.17025in)--(0.59379in,2.24776in);
+\draw (1in,1in)--(0.350059in,1.8886in);
+\draw (0.432796in,1.90833in)--(0.49154in,1.82801in)--(0.408803in,1.80828in);
+\pgftext[at={\pgfpoint{1.02767in}{0.972326in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{1.86329in}{1.17163in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$O$}}}
+\pgftext[at={\pgfpoint{0.540217in}{0.253972in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$O'$}}}
+\pgftext[at={\pgfpoint{0.322385in}{1.91627in}}] {\makebox(0,0)[br]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{1.21337in}{2.06022in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$A$}}}
+\pgftext[at={\pgfpoint{-0.109738in}{1.14257in}}] {\makebox(0,0)[tl]{\hbox{\color{rgb_000000}$A'$}}}
+\end{tikzpicture}

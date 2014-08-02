@@ -1,0 +1,39 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(0,0), P(3,1.5), "2 x 1.5in");
+
+  begin();
+  int N(6);
+  P O(0, 0), dX(0.75, 0), dY(0.2, 0.3);
+
+  clip_face((N - 0.5)*dY, -E_2);
+  clip_face(O, E_2);
+  clip_face((N - 0.5)*dX, J(dY - dX));
+
+  bold();
+  line(O, N*dX);
+  line(O, N*dY);
+
+  plain();
+  for (int i=1; i < N; ++i)
+    line(i*dX, i*dX + N*dY);
+
+  for (int i=1; i <= N; ++i)
+    {
+      line(i*dY, i*dY + N*dX);
+      line(i*dY, i*dY + N*(dX - dY));
+    }
+
+  for (int i=0; i < N; ++i)
+    for (int j=0; j < N; ++j)
+      circ(i*dX + j*dY);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -12), "\\textsc{Fig.~12.}", b);
+
+  tikz_format();
+  end();
+}

@@ -1,0 +1,71 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+P p1(-0.75, 0.5), p2(0.5, 1), p3(-0.5,-0.5), p4(0.33, -0.9);
+P f(double t)
+{
+  double s(1 - t);
+  return s*s*(s*p1 + 3*t*p2) + t*t*(3*s*p3 + t*p4);
+}
+
+// unit perp to phi at t
+P perp(P phi(double), double t)
+{
+  P loc(phi(t)), Tt(phi(t + 0.001) - loc);
+  return (1.0/norm(Tt))*J(Tt);
+}
+
+int main()
+{
+  picture(P(-2.5,-1), P(2.5, 1), "3 x 1.2in");
+
+  begin();
+  arrow_inset(0.75);
+
+  double t1(0.25), t2(0.325), t3(0.6);
+  P O(0, 0),
+    loc1(f(t1)), loc2(f(t2)), loc3(f(t3)),
+    perp1(perp(f, t1)), perp2(perp(f, t2)), perp3(perp(f, t3));
+
+  double th1(Atan2(perp1.x2(), perp1.x1())), th3(Atan2(perp3.x2(), perp3.x1()));
+
+  screen scr1(P(-1,-1), P(1, 1)), scr2(P(-1,-1), P(1, 1));
+  activate(scr1);
+  bold();
+  arc(O, 1, th1, th3);
+  plain();
+
+  circle();
+  arrow(O, perp1);
+  arrow(O, perp2);
+  arrow(O, perp3);
+
+  circ(O, P(0, -4), "$O$", b);
+  label(perp2, P(-4, -6), "$P$", b);
+  label(perp2, P(2, 2), "$\\Delta\\sigma$", tr);
+  deactivate(scr1);
+
+  inset(scr1, P(xmin(), ymin()), P(xmin() + ysize(), ymax()));
+
+  activate(scr2);
+  plot(f, 0, 1, 60);
+
+  arrow(loc1, loc1 + perp1);
+  arrow(loc2, loc2 + perp2);
+  arrow(loc3, loc3 + perp3);
+
+  label(loc2, P(4, 0), "$P$", br);
+  label(loc2, P(-2, -2), "$\\Delta s$", bl);
+
+  bold();
+  plot(f, t1, t3, 20);
+  deactivate(scr2);
+
+  inset(scr2, P(xmax() - ysize(), ymin()), P(xmax(), ymax()));
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -12), "\\textsc{Fig.~6.}", b);
+
+  tikz_format();
+  end();
+}

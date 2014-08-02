@@ -1,0 +1,120 @@
+%% Generated from fig10.xp on Sat Jun 15 14:13:00 EDT 2013 by
+%% ePiX-1.2.10
+%% 
+%%   Cartesian bounding box: [-1,1] x [-1,1]
+%%   Actual size: 2.5 x 2.5in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\xdefinecolor{rgb_b2b2b2}{rgb}{0.698039,0.698039,0.698039}%
+\xdefinecolor{rgb_d8d8d8}{rgb}{0.847059,0.847059,0.847059}%
+\xdefinecolor{rgb_ffffff}{rgb}{1,1,1}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2.5in,2.5in);
+\pgfsetfillcolor{rgb_b2b2b2}
+\pgfsetstrokecolor{rgb_b2b2b2}
+\draw [fill](0in,0in)--(2.5in,0in)--(1.25in,1.25in)--(0in,0in)--cycle;
+\pgfsetfillcolor{rgb_d8d8d8}
+\pgfsetstrokecolor{rgb_d8d8d8}
+\draw [fill](2.5in,2.5in)--(0in,2.5in)--(1.25in,1.25in)--(2.5in,2.5in)--cycle;
+\pgfsetstrokecolor{rgb_000000}
+\pgfsetlinewidth{0.8pt}
+\draw (0in,2.5in)--(2.5in,0in);
+\draw (2.5in,2.5in)--(0in,0in);
+\pgfsetlinewidth{0.4pt}
+\draw (1.13777in,0.625in)--(1.15289in,0.65625in)--
+  (1.16703in,0.6875in)--(1.17801in,0.71875in)--(1.18572in,0.75in)--
+  (1.19208in,0.78125in)--(1.19916in,0.8125in)--
+  (1.20738in,0.84375in)--(1.21538in,0.875in)--(1.22153in,0.90625in)--
+  (1.22546in,0.9375in)--(1.22824in,0.96875in)--(1.23126in,1in)--
+  (1.23499in,1.03125in)--(1.23878in,1.0625in)--
+  (1.24172in,1.09375in)--(1.2436in,1.125in)--(1.24498in,1.15625in)--
+  (1.24651in,1.1875in)--(1.2483in,1.21875in)--(1.25in,1.25in)--
+  (1.25144in,1.28125in)--(1.25292in,1.3125in)--
+  (1.25489in,1.34375in)--(1.25735in,1.375in)--(1.25978in,1.40625in)--
+  (1.26175in,1.4375in)--(1.26357in,1.46875in)--(1.26626in,1.5in)--
+  (1.2706in,1.53125in)--(1.27624in,1.5625in)--(1.2819in,1.59375in)--
+  (1.28663in,1.625in)--(1.29091in,1.65625in)--(1.2965in,1.6875in)--
+  (1.30487in,1.71875in)--(1.31572in,1.75in)--(1.32709in,1.78125in)--
+  (1.33719in,1.8125in)--(1.34622in,1.84375in)--(1.35652in,1.875in);
+\pgftext[at={\pgfpoint{1.13777in}{0.625in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{6pt}{0.5pt}$}}}
+\pgftext[at={\pgfpoint{1.35652in}{1.875in}}] {\makebox(0,0){\hbox{\color{rgb_000000}$\rule{6pt}{0.5pt}$}}}
+\draw (2.5in,0.625in)--(2.48162in,0.634191in);
+\draw (2.44485in,0.652574in)--(2.42647in,0.661765in);
+\draw (2.42647in,0.661765in)--(2.40809in,0.670956in);
+\draw (2.37132in,0.689338in)--(2.35294in,0.698529in);
+\draw (2.35294in,0.698529in)--(2.33456in,0.707721in);
+\draw (2.29779in,0.726103in)--(2.27941in,0.735294in);
+\draw (2.27941in,0.735294in)--(2.26103in,0.744485in);
+\draw (2.22426in,0.762868in)--(2.20588in,0.772059in);
+\draw (2.20588in,0.772059in)--(2.1875in,0.78125in);
+\draw (2.15074in,0.799632in)--(2.13235in,0.808824in);
+\draw (2.13235in,0.808824in)--(2.11397in,0.818015in);
+\draw (2.07721in,0.836397in)--(2.05882in,0.845588in);
+\draw (2.05882in,0.845588in)--(2.04044in,0.854779in);
+\draw (2.00368in,0.873162in)--(1.98529in,0.882353in);
+\draw (1.98529in,0.882353in)--(1.96691in,0.891544in);
+\draw (1.93015in,0.909926in)--(1.91176in,0.919118in);
+\draw (1.91176in,0.919118in)--(1.89338in,0.928309in);
+\draw (1.85662in,0.946691in)--(1.83824in,0.955882in);
+\draw (1.83824in,0.955882in)--(1.81985in,0.965074in);
+\draw (1.78309in,0.983456in)--(1.76471in,0.992647in);
+\draw (1.76471in,0.992647in)--(1.74632in,1.00184in);
+\draw (1.70956in,1.02022in)--(1.69118in,1.02941in);
+\draw (1.69118in,1.02941in)--(1.67279in,1.0386in);
+\draw (1.63603in,1.05699in)--(1.61765in,1.06618in);
+\draw (1.61765in,1.06618in)--(1.59926in,1.07537in);
+\draw (1.5625in,1.09375in)--(1.54412in,1.10294in);
+\draw (1.54412in,1.10294in)--(1.52574in,1.11213in);
+\draw (1.48897in,1.13051in)--(1.47059in,1.13971in);
+\draw (1.47059in,1.13971in)--(1.45221in,1.1489in);
+\draw (1.41544in,1.16728in)--(1.39706in,1.17647in);
+\draw (1.39706in,1.17647in)--(1.37868in,1.18566in);
+\draw (1.34191in,1.20404in)--(1.32353in,1.21324in);
+\draw (1.32353in,1.21324in)--(1.30515in,1.22243in);
+\draw (1.26838in,1.24081in)--(1.25in,1.25in);
+\draw (1.25in,1.25in)--(1.23162in,1.25919in);
+\draw (1.19485in,1.27757in)--(1.17647in,1.28676in);
+\draw (1.17647in,1.28676in)--(1.15809in,1.29596in);
+\draw (1.12132in,1.31434in)--(1.10294in,1.32353in);
+\draw (1.10294in,1.32353in)--(1.08456in,1.33272in);
+\draw (1.04779in,1.3511in)--(1.02941in,1.36029in);
+\draw (1.02941in,1.36029in)--(1.01103in,1.36949in);
+\draw (0.974265in,1.38787in)--(0.955882in,1.39706in);
+\draw (0.955882in,1.39706in)--(0.9375in,1.40625in);
+\draw (0.900735in,1.42463in)--(0.882353in,1.43382in);
+\draw (0.882353in,1.43382in)--(0.863971in,1.44301in);
+\draw (0.827206in,1.4614in)--(0.808824in,1.47059in);
+\draw (0.808824in,1.47059in)--(0.790441in,1.47978in);
+\draw (0.753676in,1.49816in)--(0.735294in,1.50735in);
+\draw (0.735294in,1.50735in)--(0.716912in,1.51654in);
+\draw (0.680147in,1.53493in)--(0.661765in,1.54412in);
+\draw (0.661765in,1.54412in)--(0.643382in,1.55331in);
+\draw (0.606618in,1.57169in)--(0.588235in,1.58088in);
+\draw (0.588235in,1.58088in)--(0.569853in,1.59007in);
+\draw (0.533088in,1.60846in)--(0.514706in,1.61765in);
+\draw (0.514706in,1.61765in)--(0.496324in,1.62684in);
+\draw (0.459559in,1.64522in)--(0.441176in,1.65441in);
+\draw (0.441176in,1.65441in)--(0.422794in,1.6636in);
+\draw (0.386029in,1.68199in)--(0.367647in,1.69118in);
+\draw (0.367647in,1.69118in)--(0.349265in,1.70037in);
+\draw (0.3125in,1.71875in)--(0.294118in,1.72794in);
+\draw (0.294118in,1.72794in)--(0.275735in,1.73713in);
+\draw (0.238971in,1.75551in)--(0.220588in,1.76471in);
+\draw (0.220588in,1.76471in)--(0.202206in,1.7739in);
+\draw (0.165441in,1.79228in)--(0.147059in,1.80147in);
+\draw (0.147059in,1.80147in)--(0.128676in,1.81066in);
+\draw (0.0919118in,1.82904in)--(0.0735294in,1.83824in);
+\draw (0.0735294in,1.83824in)--(0.0551471in,1.84743in);
+\draw (0.0183824in,1.86581in)--(0in,1.875in);
+\pgftext[at={\pgfpoint{2.47233in}{0.597326in}}] {\makebox(0,0)[tr]{\hbox{\color{rgb_000000}$t = 0$}}}
+\pgftext[at={\pgfpoint{1.33302in}{1.22233in}}] {\makebox(0,0)[bl]{\hbox{\color{rgb_000000}$O$}}}
+\filldraw[color=rgb_ffffff] (1.25in,1.25in) circle(0.0207555in);
+\draw[color=rgb_000000] (1.25in,1.25in) circle(0.0207555in);
+\pgftext[at={\pgfpoint{1.25in}{2.24285in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}\textit{Active future.}}}}
+\pgftext[at={\pgfpoint{1.25in}{0.257152in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textit{Passive past.}}}}
+\pgftext[at={\pgfpoint{1.25in}{-0.332088in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~10.}}}}
+\end{tikzpicture}

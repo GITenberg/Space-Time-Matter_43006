@@ -1,0 +1,54 @@
+%% Generated from fig2.xp on Sat Jun 15 13:02:38 EDT 2013 by
+%% ePiX-1.2.10
+%% 
+%%   Cartesian bounding box: [-2,2] x [-1,1]
+%%   Actual size: 2 x 1in
+%%   Figure offset: left by 0in, down by 0in
+%% 
+%% usepackages tikz
+%% 
+\xdefinecolor{rgb_000000}{rgb}{0,0,0}%
+\xdefinecolor{rgb_ffffff}{rgb}{1,1,1}%
+\begin{tikzpicture}
+\pgfsetlinewidth{0.4pt}
+\useasboundingbox (0in,0in) rectangle (2in,1in);
+\pgfsetlinewidth{0.8pt}
+\draw (2in,0.4in)--(0in,0.6in);
+\draw (0in,0.4in)--(2in,0.6in);
+\draw (0in,0.17in)--(2in,0.17in);
+\pgfsetlinewidth{0.4pt}
+\draw (0.75in,0.75in)--(0.764423in,0.735577in);
+\draw (0.793269in,0.706731in)--(0.807692in,0.692308in);
+\draw (0.807692in,0.692308in)--(0.822115in,0.677885in);
+\draw (0.850962in,0.649038in)--(0.865385in,0.634615in);
+\draw (0.865385in,0.634615in)--(0.879808in,0.620192in);
+\draw (0.908654in,0.591346in)--(0.923077in,0.576923in);
+\draw (0.923077in,0.576923in)--(0.9375in,0.5625in);
+\draw (0.966346in,0.533654in)--(0.980769in,0.519231in);
+\draw (0.980769in,0.519231in)--(0.995192in,0.504808in);
+\draw (1.02404in,0.475962in)--(1.03846in,0.461538in);
+\draw (1.03846in,0.461538in)--(1.05288in,0.447115in);
+\draw (1.08173in,0.418269in)--(1.09615in,0.403846in);
+\draw (1.09615in,0.403846in)--(1.11058in,0.389423in);
+\draw (1.13942in,0.360577in)--(1.15385in,0.346154in);
+\draw (1.15385in,0.346154in)--(1.16827in,0.331731in);
+\draw (1.19712in,0.302885in)--(1.21154in,0.288462in);
+\draw (1.21154in,0.288462in)--(1.22596in,0.274038in);
+\draw (1.25481in,0.245192in)--(1.26923in,0.230769in);
+\draw (1.26923in,0.230769in)--(1.28365in,0.216346in);
+\draw (1.3125in,0.1875in)--(1.32692in,0.173077in);
+\draw (1.32692in,0.173077in)--(1.34135in,0.158654in);
+\draw (1.37019in,0.129808in)--(1.38462in,0.115385in);
+\draw (1.38462in,0.115385in)--(1.39904in,0.100962in);
+\draw (1.42788in,0.0721154in)--(1.44231in,0.0576923in);
+\draw (1.44231in,0.0576923in)--(1.45673in,0.0432692in);
+\draw (1.48558in,0.0144231in)--(1.5in,0in);
+\pgftext[at={\pgfpoint{2.02767in}{0.4in}}] {\makebox(0,0)[l]{\hbox{\color{rgb_000000}$s'$}}}
+\pgftext[at={\pgfpoint{-0.027674in}{0.4in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$s''$}}}
+\pgftext[at={\pgfpoint{-0.027674in}{0.17in}}] {\makebox(0,0)[r]{\hbox{\color{rgb_000000}$g$}}}
+\pgftext[at={\pgfpoint{1.05535in}{0.555348in}}] {\makebox(0,0)[b]{\hbox{\color{rgb_000000}$P$}}}
+\filldraw[color=rgb_ffffff] (1in,0.5in) circle(0.0207555in);
+\draw[color=rgb_000000] (1in,0.5in) circle(0.0207555in);
+\pgftext[at={\pgfpoint{1.27767in}{0.277674in}}] {\makebox(0,0)[bl]{\hbox{\color{rgb_000000}$s$}}}
+\pgftext[at={\pgfpoint{1in}{-0.166044in}}] {\makebox(0,0)[t]{\hbox{\color{rgb_000000}\textsc{Fig.~2.}}}}
+\end{tikzpicture}

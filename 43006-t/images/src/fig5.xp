@@ -1,0 +1,32 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+P fp(double t)
+{
+  return P(-sech(t), t - tanh(t));
+}
+
+P fm(double t)
+{
+  return P(-sech(t), tanh(t) - t);
+}
+
+int main()
+{
+  picture(P(-1,-2), P(0,2), "0.5 x 2in");
+
+  begin();
+  double ma(1 + ymax());
+
+  line(P(0, ymin()), P(0, ymax()));
+
+  bold();
+  plot(fp, 0, ma, 40);
+  plot(fm, 0, ma, 40);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -12), "\\textsc{Fig.~5.}", b);
+
+  tikz_format();
+  end();
+}

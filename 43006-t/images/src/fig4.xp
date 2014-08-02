@@ -1,0 +1,45 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1,-1), P(1,1), "2 x 2in");
+
+  begin();
+
+  P pP(polar(0.5, M_PI/6)),
+    pB1(cis(2*M_PI/3)), pB2(cis(-M_PI_2));
+
+  Segment lB(pB1, pB2);
+  P pA(lB.midpoint(0.15)), pA1(lB.midpoint()),  pA2(lB.midpoint(0.8)),
+    pg0(lB.midpoint(0.325)), pg(pg0 + polar(0.5, -1.2*M_PI_2));
+
+  label(pB1, P(-2, 2), "$B_{1}$", t);
+  label(pB2, P( 2,-4), "$B_{2}$", b);
+
+  label(cis(-0.1), P(2, 0), "$U$", br);
+
+  bold();
+  crop_ellipse();
+
+  lB.draw();
+  Line(pg0, pg);
+  for (int i=-3; i <= 1; ++i)
+    Line(pP, pP + cis(M_PI_2 + i*M_PI/14));
+
+  plain();
+  circle();
+
+  circ(pA,  P(-2, -2), "$A$", bl);
+  circ(pA1,  P(-2, -2), "$A'$", bl);
+  circ(pA2,  P(-2, -2), "$A''$", bl);
+
+  circ(pP, P(4, 0), "$P$", r);
+  label(pg, P(-2, 0), "$g$", l);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -24), "\\textsc{Fig.~4.}", b);
+
+  tikz_format();
+  end();
+}

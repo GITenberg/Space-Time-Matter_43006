@@ -1,0 +1,35 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-2,-1), P(2,1), "2 x 1in");
+
+  begin();
+  double mm(-0.1), ht(-0.66);
+  P pP(0, 0), ps1(xmax(), mm*xmax()), ps2(xmin(), -mm*xmin()),
+    pg1(xmin(), ht), pg2(xmax(), ht), ps(0.5, -0.5);
+
+  bold();
+  line(ps1, -ps1);
+  line(ps2, -ps2);
+  line(pg1, pg2);
+
+  plain();
+  dashed();
+  dash_size(6);
+  line(-ps, 2*ps);
+
+  label(ps1, P( 2, 0), "$s'$", r);
+  label(ps2, P(-2, 0), "$s''$", l);
+  label(pg1, P(-2, 0), "$g$", l);
+
+  circ(pP, P(4,4), "$P$", t);
+  label(ps, P(2,2), "$s$", tr);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -12), "\\textsc{Fig.~2.}", b);
+
+  tikz_format();
+  end();
+}

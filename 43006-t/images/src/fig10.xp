@@ -1,0 +1,50 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+P f(double t)
+{
+  return P(0.5*t*(0.1 + t*t - 0.01*Sin(40*t)), t);
+}
+
+int main()
+{
+  picture(P(-1,-1), P(1,1), "2.5 x 2.5in");
+
+  begin();
+
+  double mm(-0.5), ht(0.75), tmax(0.5);
+  P O(0, 0), NE(1, 1), SE(1, -1), NW(-1, 1), SW(-1, -1), pt(1, mm);
+
+  fill();
+  black(0.3);
+  triangle(SW, SE, O);
+
+  black(0.15);
+  triangle(NE, NW, O);
+
+  bold();
+  black();
+  nofill();
+  line(NW, SE);
+  line(NE, SW);
+
+  plain();
+  plot(f, -tmax, tmax, 40);
+  v_axis_tick(f(-tmax));
+  v_axis_tick(f(tmax));
+
+  dashed();
+  dash_size(6);
+  line(pt, -pt);
+
+  label(pt, P(-2, -2), "$t = 0$", bl);
+  circ(O, P(6, -2), "$O$", tr);
+
+  label(P(0, ht), P(0, 4), "\\textit{Active future.}", t);
+  label(P(0,-ht), P(0,-4), "\\textit{Passive past.}", b);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -24), "\\textsc{Fig.~10.}", b);
+  tikz_format();
+  end();
+}

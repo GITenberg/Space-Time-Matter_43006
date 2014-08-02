@@ -1,0 +1,56 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-1,-1), P(3,1), "3 x 1.5in");
+
+  begin();
+  P pA(0, 0, 0), pApr(0,0.5, 0.3), pAst(2, 0, 0), pB(pApr+pAst),
+    tail1(-1, 0, 0), head1(3, 0, 0), tail2(tail1 + pApr), head2(head1 + pApr),
+    pE(0, 0, -0.66), pEst(pE + pAst),
+    VIEWPT(4, -10, 3);
+  double rad(1.0/norm(pApr));
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -24), "\\textsc{Fig.~1.}", b);
+
+  camera.at(VIEWPT).range(20);
+  bold();
+  fill(White());
+  line(tail1, pA);
+  line(tail2, pApr);
+  ellipse(pA, E_2, E_3);
+  line(-rad*pApr, rad*pApr);
+
+  line(pA, pAst);
+  line(pApr, pB);
+  ellipse(pAst, E_2, E_3);
+
+  line(pAst, head1);
+  line(pB, head2);
+
+  plain();
+  dashed();
+  dash_size(6);
+  line(tail1, pA);
+  line(tail2, pApr);
+  line(pA, pAst);
+  line(pApr, pB);
+
+  circ(pA, P(0,-4), "$A$", br);
+  circ(pAst, P(2,-4), "$A^{*}$", b);
+  circ(pApr, P(0,4), "$A'$", tl);
+  circ(pB);
+
+  label(-rad*pApr, P(-2, -4), "$h$", bl);
+
+  label(head1, P(2,0), "$g$", r);
+  label(head2, P(2,0), "$g$", r);
+
+  label(pE, "$E$");
+  label(pEst, "$E^{*}$");
+
+  tikz_format();
+  end();
+}

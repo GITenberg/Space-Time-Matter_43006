@@ -1,0 +1,40 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-2, -2), P(2,2), "2 x 2in");
+
+  begin();
+  label(P(0.5*(xmin() + xmax()), ymin()), P(-8, 0), "\\textsc{Fig.~13.}", b);
+
+  P VIEWPT(4, -10, 3);
+  camera.at(VIEWPT).range(0);
+
+  P O(0, 0, 0), O1(1, 2, 0), O2(-0.5*O1), Op(-0.25, -2, -1), Op2(-0.5*Op),
+    dS(-1, -1, 2),
+    pA(O + dS), A1(O1 + dS), A2(O2 + dS), Ap(Op + dS), Ap2(Op2 + dS);
+
+  bold();
+  line(O1, O2);
+  line(Op, Op2);
+
+  line(A1, A2);
+  line(Ap, Ap2);
+
+  line(O, pA);
+
+  right_angle(pA, A1 - pA, O - pA);
+
+  label(O, P(2, -2), "$O$", br);
+  label(O1, P(2, -2), "$O$", br);
+  label(Op, P(2, -2), "$O'$", br);
+
+  label(pA, P(-2, 2), "$A$", tl);
+  label(A1, P(2, -2), "$A$", br);
+  label(Ap, P(2, -2), "$A'$", br);
+
+  tikz_format();
+  end();
+}

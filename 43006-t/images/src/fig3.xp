@@ -1,0 +1,40 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-2,-1), P(2,1), "2 x 1in");
+
+  begin();
+  double mm(3), ht(1);
+  P pA(0, 0), pAp(ht/mm, ht),
+    pB(xmax(), 0), pC(xmin(), 0),
+    pBp(xmax(), ht), pCp(xmin(), ht),
+    pg(0.5*(pA + pB)), pgp(0.5*(pAp + pBp)),
+    ph(-ht/mm, -ht);
+
+  bold();
+  line(pB, pC);
+  line(pBp, pCp);
+  line(ph, 2*pAp);
+
+  label(pA,  P(4, 2), "$A$", tr);
+  label(pAp, P(4, 2), "$A'$", tr);
+
+  label(pB, P(0, 2), "$B$", t);
+  label(pC, P(0, 2), "$C$", tr);
+
+  label(pBp, P(0, 2), "$B'$", t);
+  label(pCp, P(0, 2), "$C'$", tr);
+
+  label(ph, P(4, 0), "$h$", r);
+
+  label(pg, P(0,-4), "$g$", b);
+  label(pgp, P(0,-4), "$g'$", b);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -12), "\\textsc{Fig.~3.}", b);
+
+  tikz_format();
+  end();
+}

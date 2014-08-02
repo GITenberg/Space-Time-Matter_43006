@@ -1,0 +1,40 @@
+/* -*-ePiX-*- */
+#include "epix.h"
+using namespace ePiX;
+
+int main()
+{
+  picture(P(-15,-5), P(25,10), "4 x 1.5in");
+
+  begin();
+  int N(5), MAX(10000);
+  P O(0, 0), dX(E_1), dY(0.5, 2);
+
+  label(P(0.5*(xmin() + xmax()), ymin()), P(0, -4), "\\textsc{Fig.~15.}", br);
+
+  camera.at(P(-2, -3, 5)).look_at(2*dY).roll(0.125*M_PI);
+
+  bold();
+  line(-dX, MAX*dX);
+  line(-0.5*dY, MAX*dY);
+
+  dashed();
+  dash_size(6);
+  line(MAX*dX, MAX*(dY - dX));
+  solid();
+
+  plain();
+  for (int i=1; i <= N; ++i)
+    line(i*dX, i*dX + MAX*dY);
+
+  for (int i=1; i <= N+1; ++i)
+    {
+      if (i <= N)
+	line(i*dY, i*dY + MAX*dX);
+
+      line(i*dX, i*dX + MAX*(dY - dX));
+    }
+
+  tikz_format();
+  end();
+}
