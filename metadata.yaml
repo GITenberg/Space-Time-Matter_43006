@@ -1,0 +1,39 @@
+_repo: Space-Time-Matter_43006
+_version: 0.1.0
+alternative_title: Raum, Zeit, Materie. English
+contributor:
+  translator:
+    agent_name: Brose, Henry L. (Henry Leopold)
+    alias: Brose, Henry Herman Leopold Adolf
+    birthdate: 1890
+    gutenberg_agent_id: '41983'
+    url: http://www.gutenberg.org/2009/agents/41983
+covers:
+- cover_type: generated
+  image_path: cover.png
+creator:
+  author:
+    agent_name: Weyl, Hermann
+    birthdate: 1885
+    deathdate: 1955
+    gutenberg_agent_id: '41982'
+    url: http://www.gutenberg.org/2009/agents/41982
+description: ''
+gutenberg_bookshelf:
+- Physics
+- Mathematics
+gutenberg_issued: '2013-06-21'
+gutenberg_type: Text
+identifiers:
+  gutenberg: '43006'
+  lccn: '22006737'
+language: en
+publisher: Project Gutenberg
+rights: Public domain in the USA.
+rights_url: http://creativecommons.org/about/pdm
+subjects:
+- !lcsh 'Relativity (Physics)'
+- !lcc 'QC'
+- !lcsh 'Space and time'
+title: Space—Time—Matter
+url: http://www.gutenberg.org/ebooks/43006
